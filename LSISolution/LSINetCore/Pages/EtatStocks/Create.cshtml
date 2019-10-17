@@ -1,0 +1,74 @@
+﻿@page
+@model LSINetCore.Pages.EtatStocks.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>LDEtatStock</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.Lieu" class="control-label"></label>
+                <input asp-for="LDEtatStock.Lieu" class="form-control" />
+                <span asp-validation-for="LDEtatStock.Lieu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.DatePremiereEntree" class="control-label"></label>
+                <input asp-for="LDEtatStock.DatePremiereEntree" class="form-control" />
+                <span asp-validation-for="LDEtatStock.DatePremiereEntree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.Coulee" class="control-label"></label>
+                <input asp-for="LDEtatStock.Coulee" class="form-control" />
+                <span asp-validation-for="LDEtatStock.Coulee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.DateDerniereSortie" class="control-label"></label>
+                <input asp-for="LDEtatStock.DateDerniereSortie" class="form-control" />
+                <span asp-validation-for="LDEtatStock.DateDerniereSortie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.NbStock" class="control-label"></label>
+                <input asp-for="LDEtatStock.NbStock" class="form-control" />
+                <span asp-validation-for="LDEtatStock.NbStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.DateMaj" class="control-label"></label>
+                <input asp-for="LDEtatStock.DateMaj" class="form-control" />
+                <span asp-validation-for="LDEtatStock.DateMaj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.Pso" class="control-label"></label>
+                <input asp-for="LDEtatStock.Pso" class="form-control" />
+                <span asp-validation-for="LDEtatStock.Pso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.PoidsTotal" class="control-label"></label>
+                <input asp-for="LDEtatStock.PoidsTotal" class="form-control" />
+                <span asp-validation-for="LDEtatStock.PoidsTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LDEtatStock.PoidsUnitaire" class="control-label"></label>
+                <input asp-for="LDEtatStock.PoidsUnitaire" class="form-control" />
+                <span asp-validation-for="LDEtatStock.PoidsUnitaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

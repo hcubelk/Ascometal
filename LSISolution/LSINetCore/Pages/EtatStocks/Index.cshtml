@@ -1,0 +1,89 @@
+﻿@page
+@model LSINetCore.Pages.EtatStocks.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+@section RealTimeProductionSection
+{
+    await @Html.RenderPartialAsync("_RealTimeProductionLayout");
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].DatePremiereEntree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].Coulee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].DateDerniereSortie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].NbStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].DateMaj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].Pso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].PoidsTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LDEtatStock[0].PoidsUnitaire)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.LDEtatStock)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatePremiereEntree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Coulee)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateDerniereSortie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NbStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateMaj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PoidsTotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PoidsUnitaire)
+                </td>
+                <td>
+                        @*<a asp-page="./Edit" asp-route-id="@item.Lieu">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.Lieu">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Lieu">Delete</a>*@
+                    </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section ActionButtonsSection
+{
+    await @Html.RenderPartialAsync("_ActionButtonsLayout");
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\l.kieliszak\\Source\\Repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj": {}
+    "C:\\Users\\l.kieliszak\\source\\repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\l.kieliszak\\Source\\Repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj": {
+    "C:\\Users\\l.kieliszak\\source\\repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\l.kieliszak\\Source\\Repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj",
+        "projectUniqueName": "C:\\Users\\l.kieliszak\\source\\repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj",
         "projectName": "LSINetCore",
-        "projectPath": "C:\\Users\\l.kieliszak\\Source\\Repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj",
+        "projectPath": "C:\\Users\\l.kieliszak\\source\\repos\\Ascometal\\LSISolution\\LSINetCore\\LSINetCore.csproj",
         "packagesPath": "C:\\Users\\l.kieliszak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\l.kieliszak\\Source\\Repos\\Ascometal\\LSISolution\\LSINetCore\\obj\\",
+        "outputPath": "C:\\Users\\l.kieliszak\\source\\repos\\Ascometal\\LSISolution\\LSINetCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,7 +42,19 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
             "HangFire.Core": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
+            "HangFire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
+            "Hangfire.AspNetCore": {
               "target": "Package",
               "version": "[1.7.6, )"
             },
@@ -57,6 +69,14 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.0.0, )"
             }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations;
 namespace LSINetCore.Models
 {
     public partial class LDEtatStock
     {
+        [Key]
         public string Lieu { get; set; }
         public DateTime? DatePremiereEntree { get; set; }
         public string Coulee { get; set; }

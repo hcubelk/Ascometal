@@ -1,0 +1,67 @@
+﻿@page
+@model LSINetCore.Pages.EtatStocks.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LDEtatStock</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.DatePremiereEntree)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.DatePremiereEntree)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.Coulee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.Coulee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.DateDerniereSortie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.DateDerniereSortie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.NbStock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.NbStock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.DateMaj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.DateMaj)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.Pso)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.Pso)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.PoidsTotal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.PoidsTotal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LDEtatStock.PoidsUnitaire)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LDEtatStock.PoidsUnitaire)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.LDEtatStock.Lieu">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
