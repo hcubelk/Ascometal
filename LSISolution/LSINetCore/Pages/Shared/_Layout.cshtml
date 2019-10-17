@@ -30,9 +30,15 @@
         </nav>
     </header>
     <div class="container">
+        <div id="RealTimeproductionPanel">
+            @RenderSection("RealTimeProduction", required: false)
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        <div id="ActionButtonsPanel">
+            @RenderSection("ActionButtons", required: false)
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">
