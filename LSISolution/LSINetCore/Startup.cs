@@ -47,6 +47,8 @@ namespace LSINetCore
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            // Add image directory.
+            app.UseStaticFiles();
 
             app.UseHangfireServer();
             app.UseHangfireDashboard();
