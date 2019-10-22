@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
@@ -9,7 +10,7 @@ namespace LSINetCore.Models
         {
             LDRoles = new HashSet<LDRoles>();
         }
-
+        [Key]
         public string Code { get; set; }
         public string Libelle { get; set; }
         public DateTime? DateMaj { get; set; }

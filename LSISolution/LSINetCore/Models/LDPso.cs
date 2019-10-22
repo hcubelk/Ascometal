@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
@@ -11,8 +12,9 @@ namespace LSINetCore.Models
             LDSousProduits = new HashSet<LDSousProduits>();
             LDStockPso = new HashSet<LDStockPso>();
         }
-
+        [Key]
         public string Coulee { get; set; }
+        [Key]
         public int NumeroLingot { get; set; }
         public string Of { get; set; }
         public int NumeroWagon { get; set; }

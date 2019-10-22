@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LDBloomingLaminage
     {
+        [Key]
         public int IdBloLaminage { get; set; }
         public string BloOfinterne { get; set; }
         public int BloNumLingot { get; set; }

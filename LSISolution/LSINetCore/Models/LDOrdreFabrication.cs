@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
@@ -18,7 +19,7 @@ namespace LSINetCore.Models
             LDSectionchargeRefroidissoirs = new HashSet<LDSectionchargeRefroidissoirs>();
             LDSectionchargeSvt = new HashSet<LDSectionchargeSvt>();
         }
-
+        [Key]
         public string Of { get; set; }
         public int Indice { get; set; }
         public int Etat { get; set; }
@@ -78,5 +79,6 @@ namespace LSINetCore.Models
         public virtual ICollection<LDSectionchargePoidsmetrique> LDSectionchargePoidsmetrique { get; set; }
         public virtual ICollection<LDSectionchargeRefroidissoirs> LDSectionchargeRefroidissoirs { get; set; }
         public virtual ICollection<LDSectionchargeSvt> LDSectionchargeSvt { get; set; }
+        
     }
 }

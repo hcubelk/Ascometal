@@ -1,0 +1,155 @@
+﻿@page
+@model LSINetCore.Pages.Pits.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+@section RealTimeProductionSection
+{
+    await @Html.RenderPartialAsync("_RealTimeProductionLayout");
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDOfSuivi.Rang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].Of)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].Nuance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].Coulee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDSectionchargePits.FirstOrDefault().H2coulee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].PoidsDemiProduitUnitaire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].NombreDemiProduit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].AcompteSolde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].ProfilProduit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDSectionchargeLingot.FirstOrDefault().SectionLaminage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].Epaisseur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDSectionchargePits.FirstOrDefault().NumeroFour1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDSectionchargePits.FirstOrDefault().NumeroFour2)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Pits[0].ConsignesScarfing.LibelleConsigne)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].NumeroMontage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDSectionchargeDecoupe.FirstOrDefault().OutilDeDecoupe)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Pits[0].ConsignesPrelevement.CodeConsigne)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].LDSectionchargeRefroidissoirs.FirstOrDefault().CodeOperation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrdreFabrications[0].Client)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrdreFabrications)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LDOfSuivi.Rang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Of)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nuance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Coulee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LDSectionchargePits.FirstOrDefault().H2coulee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PoidsDemiProduitUnitaire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreDemiProduit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcompteSolde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfilProduit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LDSectionchargeLingot.FirstOrDefault().SectionLaminage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epaisseur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LDSectionchargePits.FirstOrDefault().NumeroFour1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LDSectionchargePits.FirstOrDefault().NumeroFour2)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ConsignesScarfing.LibelleConsigne)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroMontage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LDSectionchargeDecoupe.FirstOrDefault().OutilDeDecoupe)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ConsignesPrelevement.CodeConsigne)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.LDSectionchargeRefroidissoirs.FirstOrDefault().CodeOperation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client)
+            </td>
+            <td>
+                @*<a asp-page="./Edit" asp-route-id="@item.Lieu">Edit</a> |
+            <a asp-page="./Details" asp-route-id="@item.Lieu">Details</a> |
+            <a asp-page="./Delete" asp-route-id="@item.Lieu">Delete</a>*@
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@section ActionButtonsSection
+{
+    await @Html.RenderPartialAsync("_ActionButtonsLayout");
+}

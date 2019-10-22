@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LPArret
     {
+        [Key]
         public int IdArret { get; set; }
         public string Code { get; set; }
         public string Libelle { get; set; }

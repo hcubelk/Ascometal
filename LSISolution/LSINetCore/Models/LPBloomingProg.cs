@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LPBloomingProg
     {
+        [Key]
         public int IdBloPprog { get; set; }
         public DateTime BloPdateCre { get; set; }
         public DateTime BloPdateMdf { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
@@ -16,6 +17,7 @@ namespace LSINetCore.Models
             LDSectionchargeSvt = new HashSet<LDSectionchargeSvt>();
         }
 
+        [Key]
         public string CodeOperation { get; set; }
         public string LibelleConsigne { get; set; }
 

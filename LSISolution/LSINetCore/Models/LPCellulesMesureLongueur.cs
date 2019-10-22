@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LPCellulesMesureLongueur
     {
+        [Key]
         public string Cellule { get; set; }
         public decimal Longueur { get; set; }
         public int NbImpulsions { get; set; }

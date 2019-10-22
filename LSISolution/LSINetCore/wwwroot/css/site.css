@@ -98,3 +98,12 @@ body {
     font-weight: bold;
     font-size: medium;
 }
+.table-debug {
+    border: 1px solid white;
+}
+.tr-debug {
+    border: 1px solid white;
+}
+.td-debug {
+    border: 1px solid white;
+}

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LDMamQual
     {
+        [Key]
         public string Of { get; set; }
         public int? Mmgof { get; set; }
         public int? Mmtrof { get; set; }

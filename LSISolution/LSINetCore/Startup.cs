@@ -27,9 +27,12 @@ namespace LSINetCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            // Set opening page.
+            
             services.AddDbContext<LSINetCoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LSINetCoreContext")));
             services.AddHangfire(x => x.UseSqlServerStorage(Configuration.GetConnectionString("LSINetCoreContext")));
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

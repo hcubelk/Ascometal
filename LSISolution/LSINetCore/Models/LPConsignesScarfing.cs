@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LPConsignesScarfing
     {
+        [Key]
         public string Code { get; set; }
         public string TypeGaz { get; set; }
         public decimal Pression1 { get; set; }

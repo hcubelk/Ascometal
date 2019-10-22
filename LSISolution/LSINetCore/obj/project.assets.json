@@ -9119,6 +9119,7 @@
       "HangFire.Core >= 1.7.6",
       "HangFire.SqlServer >= 1.7.6",
       "Hangfire.AspNetCore >= 1.7.6",
+      "Microsoft.EntityFrameworkCore >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0",
@@ -9178,6 +9179,10 @@
           "Hangfire.AspNetCore": {
             "target": "Package",
             "version": "[1.7.6, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",

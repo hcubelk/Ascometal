@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LSINetCore.Models
 {
     public partial class LDCouleeSuivi
     {
+        [Key]
         public string IdCoulee { get; set; }
         public string Nuance { get; set; }
         public int? NombreLingotBacVerniculite { get; set; }
